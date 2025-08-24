@@ -1,0 +1,53 @@
+## User Authentication API (Node.js + Express + MongoDB)
+
+This project provides a simple authentication API using Node.js, Express, Mongoose (MongoDB), and JWT tokens. It supports registration, login, protected routes, and token-based access.
+
+## The API supports:
+
+User Registration
+
+User Login (Token Generation)
+
+Fetch Logged-in User Data
+
+Fetch All Users (protected)
+
+
+## Detailed documentation for each API endpoint in Postman.
+## Postman Link:
+https://.postman.co/workspace/My-Workspace~7ddcbf34-d4ca-43a2-84e6-a984fc84691d/collection/46092349-fc79474f-09d5-44a2-ba91-21d7f949426a?action=share&creator=46092349
+
+## API Endpoints
+
+## POST /api/auth/register
+
+Register a user
+
+Request: { username, email, password }
+
+Response: { message }
+
+## POST /api/auth/login
+
+Log in user
+
+Request: { email, password }
+
+Response: { token }
+
+## GET /api/auth/me
+
+Get current user (token required)
+
+## GET /api/auth/users
+
+Get all users (token required)
+
+## Validation & Error Handling
+All inputs are validated (e.g., empty fields return errors).
+
+Duplicate emails are blocked during registration.
+
+Invalid logins return clear error messages.
+
+All passwords are hashed using bcryptjs.
